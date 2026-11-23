@@ -345,14 +345,15 @@ summary:focus-visible {
 
 /* ================= PREGUNTAS FRECUENTES (FAQ) ================= */
 .faq-container {
-  max-width: 820px;
+  max-width: 1140px;
 }
 
 .faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 1.25rem;
+  }
 
 .faq-item {
   background-color: var(--color-superficie);
