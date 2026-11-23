@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Consultorio Médico Dr. Omar Henry Panche — app.js
-   Interacciones: Menú móvil accesible y validación del formulario de citas
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
   // ---------------- 1. MENÚ MÓVIL ACCESIBLE ----------------
   const menuToggle = document.getElementById("menuToggle");
@@ -10,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
 
   if (menuToggle && navMenu) {
-    // Alterna la visibilidad del menú al hacer clic en el botón hamburguesa
     menuToggle.addEventListener("click", () => {
       const estaAbierto = navMenu.classList.toggle("is-open");
       menuToggle.setAttribute("aria-expanded", String(estaAbierto));
@@ -20,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
 
-    // Cierra el menú móvil automáticamente al seleccionar cualquier enlace
     navLinks.forEach((enlace) => {
       enlace.addEventListener("click", () => {
         if (navMenu.classList.contains("is-open")) {
@@ -40,13 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const fechaInput = document.getElementById("fecha");
   const formFeedback = document.getElementById("formFeedback");
 
-  // Restringe el selector de fecha para no permitir días anteriores a hoy
   if (fechaInput) {
     const hoy = new Date().toISOString().split("T")[0];
     fechaInput.setAttribute("min", hoy);
   }
 
-  // Función auxiliar para mostrar un error en un campo específico
   function mostrarError(campo, idError, mensaje) {
     const contenedorError = document.getElementById(idError);
     campo.classList.add("input-error");
@@ -56,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Función auxiliar para limpiar el error de un campo específico
   function limpiarError(campo, idError) {
     const contenedorError = document.getElementById(idError);
     campo.classList.remove("input-error");
@@ -66,25 +56,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Limpia el mensaje de error en cuanto el usuario empieza a corregir el campo
   nombreInput.addEventListener("input", () => limpiarError(nombreInput, "error-nombre"));
   telefonoInput.addEventListener("input", () => limpiarError(telefonoInput, "error-telefono"));
   servicioSelect.addEventListener("change", () => limpiarError(servicioSelect, "error-servicio"));
   fechaInput.addEventListener("change", () => limpiarError(fechaInput, "error-fecha"));
 
-  // Validación principal al enviar el formulario
   if (citaForm) {
     citaForm.addEventListener("submit", (evento) => {
-      // Evita la recarga de la página y el envío real a un servidor
       evento.preventDefault();
 
-      // Reinicia el mensaje general de estado
       formFeedback.textContent = "";
       formFeedback.className = "form-feedback";
 
       let esValido = true;
 
-      // Validar nombre completo (mínimo 3 caracteres)
       const nombreValor = nombreInput.value.trim();
       if (nombreValor.length < 3) {
         mostrarError(
@@ -97,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
         limpiarError(nombreInput, "error-nombre");
       }
 
-      // Validar teléfono (exactamente 10 dígitos numéricos para Colombia)
       const telefonoLimpio = telefonoInput.value.replace(/\D/g, "");
       if (telefonoLimpio.length !== 10) {
         mostrarError(
@@ -110,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
         limpiarError(telefonoInput, "error-telefono");
       }
 
-      // Validar servicio de interés
       if (servicioSelect.value === "") {
         mostrarError(
           servicioSelect,
@@ -122,7 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
         limpiarError(servicioSelect, "error-servicio");
       }
 
-      // Validar fecha tentativa (no vacía y no anterior a hoy)
       const hoy = new Date().toISOString().split("T")[0];
       if (!fechaInput.value) {
         mostrarError(
@@ -142,15 +124,12 @@ document.addEventListener("DOMContentLoaded", () => {
         limpiarError(fechaInput, "error-fecha");
       }
 
-      // Mostrar resultado final al usuario
       if (!esValido) {
-        formFeedback.textContent =
-          "Revisa los campos marcados en rojo antes de continuar.";
+        formFeedback.textContent = "Revisa los campos marcados en rojo antes de continuar.";
         formFeedback.classList.add("is-error");
         return;
       }
 
-      // Si todos los datos son válidos, muestra confirmación clara y limpia el formulario
       const servicioTexto = servicioSelect.options[servicioSelect.selectedIndex].text;
       formFeedback.textContent = `¡Gracias, ${nombreValor}! Tu solicitud para ${servicioTexto} el ${fechaInput.value} fue validada correctamente. Nos comunicaremos al ${telefonoLimpio} para confirmar tu horario.`;
       formFeedback.classList.add("is-success");
