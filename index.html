@@ -95,4 +95,219 @@
               Abordaje clínico para dolores crónicos, articulares y musculares que busca aliviar las molestias,
               recuperar la movilidad y reducir la dependencia innecesaria de medicamentos.
             </p>
-            <a href="#citas" class="card-link">Agendar consulta de dolor &
+            <a href="#citas" class="card-link">Agendar consulta de dolor &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: BENEFICIOS -->
+    <section id="beneficios" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>Beneficios de nuestro enfoque</h2>
+          <p class="section-intro">
+            Cuatro pilares que guían cada consulta en el Consultorio Médico Dr. Omar Henry Panche.
+          </p>
+        </header>
+
+        <div class="grid grid-benefits">
+          <article class="card benefit-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <h3>Atención personalizada</h3>
+            <p>Evaluación detallada de tu historia clínica, rutina y necesidades reales sin afanes.</p>
+          </article>
+
+          <article class="card benefit-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Enfoque preventivo</h3>
+            <p>No solo tratamos el síntoma; identificamos factores que previenen recaídas futuras.</p>
+          </article>
+
+          <article class="card benefit-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <h3>Seguimiento continuo</h3>
+            <p>Acompañamiento progresivo para ajustar tu tratamiento según tu evolución.</p>
+          </article>
+
+          <article class="card benefit-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                <line x1="15" y1="9" x2="15.01" y2="9"/>
+              </svg>
+            </div>
+            <h3>Trato humano</h3>
+            <p>Explicaciones claras, sin tecnicismos innecesarios, en un entorno tranquilo y confiable.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: PREGUNTAS FRECUENTES -->
+    <section id="faq" class="section">
+      <div class="container faq-container">
+        <header class="section-header">
+          <h2>Preguntas frecuentes</h2>
+          <p class="section-intro">
+            Resolvemos las dudas más comunes antes de tu primera visita al consultorio.
+          </p>
+        </header>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>¿Cuánto dura una consulta de medicina integrativa?</summary>
+            <p>
+              La primera consulta tiene una duración aproximada de 45 a 60 minutos para revisar tu historial médico completo y definir un plan claro. Los controles posteriores duran entre 30 y 40 minutos.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Necesito orden médica o remisión para agendar cita?</summary>
+            <p>
+              No necesitas orden médica previa. Puedes agendar directamente tu valoración particular. Si tienes exámenes de laboratorio o fórmulas recientes, te recomendamos traerlos.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Qué modalidades de atención ofrecen?</summary>
+            <p>
+              La atención principal es presencial en nuestro consultorio en Miraflores, Boyacá, con seguimiento personalizado según el plan acordado con el Dr. Omar Henry Panche.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Cuál es el horario y dónde está ubicado el consultorio?</summary>
+            <p>
+              Estamos ubicados en Miraflores, Boyacá. Atendemos de 8:00 a. m. a 12:00 m. y de 2:00 p. m. a 6:00 p. m. También puedes comunicarte al teléfono 313 442 1494.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: FORMULARIO DE CITAS -->
+    <section id="citas" class="section section-alt">
+      <div class="container form-container">
+        <header class="section-header">
+          <h2>Agenda tu cita</h2>
+          <p class="section-intro">
+            Completa tus datos y nos pondremos en contacto para confirmar la disponibilidad de tu consulta.
+          </p>
+        </header>
+
+        <form id="citaForm" class="appointment-form" novalidate>
+          <div class="form-group">
+            <label for="nombre">Nombre completo <span class="required" aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej. María Fernanda Gómez"
+              autocomplete="name"
+              required
+              aria-describedby="error-nombre"
+            >
+            <span class="error-message" id="error-nombre" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono o WhatsApp <span class="required" aria-hidden="true">*</span></label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Ej. 3134421494"
+              autocomplete="tel"
+              inputmode="numeric"
+              required
+              aria-describedby="error-telefono"
+            >
+            <span class="error-message" id="error-telefono" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="servicio">Servicio de interés <span class="required" aria-hidden="true">*</span></label>
+            <select id="servicio" name="servicio" required aria-describedby="error-servicio">
+              <option value="">Selecciona una opción</option>
+              <option value="nutricion">Nutrición Integrativa</option>
+              <option value="dolor">Manejo Integral del Dolor</option>
+              <option value="general">Consulta Integrativa General</option>
+            </select>
+            <span class="error-message" id="error-servicio" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="fecha">Fecha tentativa <span class="required" aria-hidden="true">*</span></label>
+            <input
+              type="date"
+              id="fecha"
+              name="fecha"
+              required
+              aria-describedby="error-fecha"
+            >
+            <span class="error-message" id="error-fecha" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje o motivo de consulta (opcional)</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              placeholder="Cuéntanos brevemente en qué podemos ayudarte..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Solicitar cita</button>
+
+          <div id="formFeedback" class="form-feedback" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= PIE DE PÁGINA ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <h2 class="footer-title">Consultorio Médico Dr. Omar Henry Panche</h2>
+        <p>Medicina integrativa enfocada en nutrición clínica y manejo integral del dolor.</p>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contacto y horarios</h3>
+        <ul class="footer-list">
+          <li><strong>Ubicación:</strong> Miraflores, Boyacá</li>
+          <li><strong>Horario:</strong> 8:00 a. m. – 12:00 m. y 2:00 p. m. – 6:00 p. m.</li>
+          <li><strong>Teléfono / WhatsApp:</strong> <a href="tel:+573134421494">313 442 1494</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Consultorio Médico Dr. Omar Henry Panche. Sitio informativo para solicitud de citas médicas.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
