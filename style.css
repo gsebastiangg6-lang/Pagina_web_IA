@@ -96,8 +96,16 @@ summary:focus-visible {
 }
 
 .brand {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 150px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center 41%;
+  display: block;
 }
 
 .brand-title {
