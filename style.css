@@ -400,22 +400,19 @@ summary:focus-visible {
 
 /* ================= FORMULARIO DE CITAS ================= */
 .form-container {
-    max-width: 900px;
-  }
+  max-width: 1140px;
+}
 
-  .appointment-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem 1.5rem;
-    padding: 2.25rem;
-  }
-
-  /* El campo de mensaje, el botón y el aviso ocupan las 2 columnas */
-  .appointment-form .form-group:nth-of-type(5),
-  .appointment-form .btn-full,
-  .appointment-form .form-feedback {
-    grid-column: 1 / -1;
-  }
+.appointment-form {
+  background-color: var(--color-superficie);
+  border: 1px solid #D9E6EE;
+  border-radius: var(--radio-lg);
+  padding: 1.5rem;
+  box-shadow: var(--sombra-suave);
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
 
 .form-group {
   display: flex;
@@ -614,15 +611,15 @@ summary:focus-visible {
   }
 
  .form-container {
-    max-width: 900px;
+    max-width: 1140px;
   }
 
   .form-container .section-header {
-    text-align: center;
+    text-align: left;
   }
 
   .form-container .section-intro {
-    margin: 0 auto;
+    margin: 0;
   }
 
   .appointment-form {
@@ -631,8 +628,6 @@ summary:focus-visible {
     align-items: start;
     gap: 1rem 1.75rem;
     padding: 2.25rem;
-    background-color: var(--color-superficie);
-    border: 1px solid #D9E6EE;
   }
 
   .appointment-form .form-group:nth-of-type(5),
