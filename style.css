@@ -1,24 +1,28 @@
 /* ================= VARIABLES Y CONFIGURACIÓN BASE ================= */
 :root {
-  --color-primario: #2E5A4C;
-  --color-primario-oscuro: #224439;
-  --color-secundario: #E8F0EC;
-  --color-fondo: #FAF9F6;
+  /* Paleta oficial extraída del logo */
+  --color-primario: #0067A5;
+  --color-primario-oscuro: #1F364D;
+  --color-secundario: #EBF3F7;
+  --color-fondo: #F7FAFC;
   --color-superficie: #FFFFFF;
-  --color-texto: #1F2933;
-  --color-texto-suave: #4A5568;
-  --color-acento: #C86D51;
-  --color-acento-hover: #B05A40;
+  --color-texto: #1F364D;
+  --color-texto-suave: #4A5D6E;
+  --color-acento: #5A9B5C;
+  --color-acento-hover: #478049;
+  --color-teal: #1E6B7B;
   --color-error: #C53030;
   --color-exito: #276749;
   --color-exito-fondo: #E6F4EA;
 
+  /* Tipografía alineada al estilo del logo */
   --fuente-titulos: Georgia, "Times New Roman", serif;
   --fuente-cuerpo: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
+  /* Espaciado, radios y sombras */
   --radio-md: 8px;
   --radio-lg: 12px;
-  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --sombra-suave: 0 4px 12px rgba(31, 54, 77, 0.07);
   --transicion: 0.2s ease-in-out;
 }
 
@@ -233,11 +237,11 @@ summary:focus-visible {
 }
 
 .hero-eyebrow {
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-primario);
+  letter-spacing: 0.14em;
+  color: var(--color-teal);
   margin-bottom: 0.75rem;
 }
 
