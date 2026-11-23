@@ -349,12 +349,10 @@ summary:focus-visible {
 }
 
 .faq-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: start;
-    gap: 1.25rem;
-  }
-
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
 .faq-item {
   background-color: var(--color-superficie);
   border: 1px solid var(--color-secundario);
@@ -560,6 +558,12 @@ summary:focus-visible {
 @media (min-width: 768px) {
   .container {
     padding: 0 2rem;
+  }
+
+  .faq-list {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 1.25rem;
   }
 
   .menu-toggle {
