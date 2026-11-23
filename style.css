@@ -399,19 +399,22 @@ summary:focus-visible {
 
 /* ================= FORMULARIO DE CITAS ================= */
 .form-container {
-  max-width: 680px;
-}
+    max-width: 900px;
+  }
 
-.appointment-form {
-  background-color: var(--color-superficie);
-  border: 1px solid var(--color-secundario);
-  border-radius: var(--radio-lg);
-  padding: 1.5rem;
-  box-shadow: var(--sombra-suave);
-  display: flex;
-  flex-direction: column;
-  gap: 1.15rem;
-}
+  .appointment-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1.5rem;
+    padding: 2.25rem;
+  }
+
+  /* El campo de mensaje, el botón y el aviso ocupan las 2 columnas */
+  .appointment-form .form-group:nth-of-type(5),
+  .appointment-form .btn-full,
+  .appointment-form .form-feedback {
+    grid-column: 1 / -1;
+  }
 
 .form-group {
   display: flex;
@@ -447,10 +450,25 @@ summary:focus-visible {
 .form-group textarea {
   resize: vertical;
 }
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input,
+.form-group select {
+  height: 46px;
+}
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
+  border-color: var(--color-primario);
+  background-color: var(--color-superficie);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus
+ {
   border-color: var(--color-primario);
   background-color: var(--color-superficie);
 }
@@ -594,8 +612,32 @@ summary:focus-visible {
     grid-template-columns: repeat(2, 1fr);
   }
 
+ .form-container {
+    max-width: 900px;
+  }
+
+  .form-container .section-header {
+    text-align: center;
+  }
+
+  .form-container .section-intro {
+    margin: 0 auto;
+  }
+
   .appointment-form {
-    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 1rem 1.75rem;
+    padding: 2.25rem;
+    background-color: var(--color-superficie);
+    border: 1px solid #D9E6EE;
+  }
+
+  .appointment-form .form-group:nth-of-type(5),
+  .appointment-form .btn-full,
+  .appointment-form .form-feedback {
+    grid-column: 1 / -1;
   }
 }
 
